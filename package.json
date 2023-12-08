@@ -5,11 +5,11 @@
     "image-optimization": "bin/image-optimization.js"
   },
   "scripts": {
-    "prebuild": "npm install sharp --prefix functions/image-processing/ --platform=linux --arch=x64",
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "deploy": "cdk deploy -c S3_IMAGE_BUCKET_NAME=\"{BUCKET_NAME}\""
   },
   "devDependencies": {
     "@types/jest": "^29.5.3",
